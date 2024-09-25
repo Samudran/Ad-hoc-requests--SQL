@@ -1,0 +1,7 @@
+# Get the products that have the highest and lowest manufacturing costs.#
+
+Select product,p.product_code,manufacturing_cost from 
+(select * from fact_manufacturing_cost where manufacturing_cost in (
+    (select max(manufacturing_cost) from fact_manufacturing_cost),
+    (select min(manufacturing_cost) from fact_manufacturing_cost))) as FMC join dim_product p
+    on p.product_code=fmc.product_code order by manufacturing_cost desc

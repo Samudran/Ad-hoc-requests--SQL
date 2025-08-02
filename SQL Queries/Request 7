@@ -1,4 +1,9 @@
-# Get the complete report of the Gross sales amount for the customer “Atliq Exclusive”  for each month#
+#Get the complete report of the Gross sales amount for the customer  “Atliq Exclusive”  for each month  .  This analysis helps to  get an idea of low and 
+high-performing months and take strategic decisions. 
+The final report contains these columns: 
+Month 
+Year 
+Gross sales Amount
 
 
 select monthname(fs.date) as month, fs.fiscal_year, concat(Round(sum(fg.gross_price*fs.sold_quantity/1000000),2),'M') as gross_sales_amt 

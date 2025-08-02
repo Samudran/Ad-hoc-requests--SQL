@@ -1,4 +1,8 @@
-# Get the products that have the highest and lowest manufacturing costs.#
+#Get the products that have the highest and lowest manufacturing costs. The final output should contain these fields, 
+product_code 
+product 
+manufacturing_cost
+
 
 Select product,p.product_code,manufacturing_cost from 
 (select * from fact_manufacturing_cost where manufacturing_cost in (

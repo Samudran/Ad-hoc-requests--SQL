@@ -1,4 +1,9 @@
-#  Follow-up: Which segment had the most increase in unique products in 2021 vs 2020?#
+#Follow-up: Which segment had the most increase in unique products in 2021 vs 2020? The final output contains these fields, 
+segment 
+product_count_2020 
+product_count_2021 
+difference 
+
 
 With cte1 as 
 (Select p.segment as A,count(distinct(fs.product_code)) as B from fact_sales_monthly fs join

@@ -1,4 +1,6 @@
-# In which quarter of 2020, got the maximum total_sold_quantity? The final output contains these fields sorted by the total_sold_quantity#
+#In which quarter of 2020, got the maximum total_sold_quantity? The final output contains these fields sorted by the total_sold_quantity, 
+Quarter 
+total_sold_quantity
 
 
 with cte1 as (SELECT *,month(date_add(date,interval 4 month)) as month
